@@ -1,0 +1,3 @@
+UPDATE {{dbprefix}}options SET option_value = replace(option_value, '{{oldurl}}', '{{newurl}}') WHERE option_name = 'home' OR option_name = 'siteurl'; UPDATE {{dbprefix}}posts SET guid = replace(guid, '{{oldurl}}','{{newurl}}');
+UPDATE {{dbprefix}}posts SET post_content = replace(post_content, '{{oldurl}}', '{{newurl}}');
+UPDATE {{dbprefix}}postmeta SET meta_value = replace(meta_value,'{{oldurl}}','{{newurl}}');

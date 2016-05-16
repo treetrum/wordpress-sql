@@ -11,6 +11,8 @@
 		220810CC1CE9B9CE00FEA368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220810CB1CE9B9CE00FEA368 /* ViewController.swift */; };
 		220810CE1CE9B9CE00FEA368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220810CD1CE9B9CE00FEA368 /* Assets.xcassets */; };
 		220810D11CE9B9CE00FEA368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220810CF1CE9B9CE00FEA368 /* Main.storyboard */; };
+		220810D91CE9CB0900FEA368 /* WordPressSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220810D81CE9CB0900FEA368 /* WordPressSQLManager.swift */; };
+		220810DC1CE9CB8C00FEA368 /* sqlTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 220810DB1CE9CB8C00FEA368 /* sqlTemplate.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		220810CD1CE9B9CE00FEA368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220810D01CE9B9CE00FEA368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		220810D21CE9B9CE00FEA368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		220810D81CE9CB0900FEA368 /* WordPressSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSQLManager.swift; sourceTree = "<group>"; };
+		220810DB1CE9CB8C00FEA368 /* sqlTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sqlTemplate.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +56,23 @@
 		220810C81CE9B9CE00FEA368 /* WordPressSQL */ = {
 			isa = PBXGroup;
 			children = (
+				220810DA1CE9CB7900FEA368 /* Resources */,
 				220810C91CE9B9CE00FEA368 /* AppDelegate.swift */,
 				220810CB1CE9B9CE00FEA368 /* ViewController.swift */,
 				220810CD1CE9B9CE00FEA368 /* Assets.xcassets */,
 				220810CF1CE9B9CE00FEA368 /* Main.storyboard */,
 				220810D21CE9B9CE00FEA368 /* Info.plist */,
+				220810D81CE9CB0900FEA368 /* WordPressSQLManager.swift */,
 			);
 			path = WordPressSQL;
+			sourceTree = "<group>";
+		};
+		220810DA1CE9CB7900FEA368 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				220810DB1CE9CB8C00FEA368 /* sqlTemplate.txt */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +135,7 @@
 			files = (
 				220810CE1CE9B9CE00FEA368 /* Assets.xcassets in Resources */,
 				220810D11CE9B9CE00FEA368 /* Main.storyboard in Resources */,
+				220810DC1CE9CB8C00FEA368 /* sqlTemplate.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +148,7 @@
 			files = (
 				220810CC1CE9B9CE00FEA368 /* ViewController.swift in Sources */,
 				220810CA1CE9B9CE00FEA368 /* AppDelegate.swift in Sources */,
+				220810D91CE9CB0900FEA368 /* WordPressSQLManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
