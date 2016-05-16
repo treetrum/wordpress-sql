@@ -13,7 +13,23 @@
 		220810D11CE9B9CE00FEA368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220810CF1CE9B9CE00FEA368 /* Main.storyboard */; };
 		220810D91CE9CB0900FEA368 /* WordPressSQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220810D81CE9CB0900FEA368 /* WordPressSQLManager.swift */; };
 		220810DC1CE9CB8C00FEA368 /* sqlTemplate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 220810DB1CE9CB8C00FEA368 /* sqlTemplate.txt */; };
+		220810E11CE9DFEE00FEA368 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220810E01CE9DFEE00FEA368 /* Sparkle.framework */; };
+		220810E31CE9E02A00FEA368 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 220810E01CE9DFEE00FEA368 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		220810E51CE9E66F00FEA368 /* AppCast.xml in Resources */ = {isa = PBXBuildFile; fileRef = 220810E41CE9E66F00FEA368 /* AppCast.xml */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		220810E21CE9E00F00FEA368 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				220810E31CE9E02A00FEA368 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		220810C61CE9B9CE00FEA368 /* WordPressSQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordPressSQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,8 @@
 		220810D21CE9B9CE00FEA368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		220810D81CE9CB0900FEA368 /* WordPressSQLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPressSQLManager.swift; sourceTree = "<group>"; };
 		220810DB1CE9CB8C00FEA368 /* sqlTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sqlTemplate.txt; sourceTree = "<group>"; };
+		220810E01CE9DFEE00FEA368 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		220810E41CE9E66F00FEA368 /* AppCast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AppCast.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				220810E11CE9DFEE00FEA368 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,7 @@
 		220810BD1CE9B9CE00FEA368 = {
 			isa = PBXGroup;
 			children = (
+				220810DF1CE9DFD100FEA368 /* Frameworks */,
 				220810C81CE9B9CE00FEA368 /* WordPressSQL */,
 				220810C71CE9B9CE00FEA368 /* Products */,
 			);
@@ -71,8 +91,17 @@
 			isa = PBXGroup;
 			children = (
 				220810DB1CE9CB8C00FEA368 /* sqlTemplate.txt */,
+				220810E41CE9E66F00FEA368 /* AppCast.xml */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		220810DF1CE9DFD100FEA368 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				220810E01CE9DFEE00FEA368 /* Sparkle.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +114,8 @@
 				220810C21CE9B9CE00FEA368 /* Sources */,
 				220810C31CE9B9CE00FEA368 /* Frameworks */,
 				220810C41CE9B9CE00FEA368 /* Resources */,
+				220810DE1CE9D0CE00FEA368 /* ShellScript */,
+				220810E21CE9E00F00FEA368 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -107,6 +138,7 @@
 				TargetAttributes = {
 					220810C51CE9B9CE00FEA368 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N5B3FJPB8K;
 					};
 				};
 			};
@@ -135,11 +167,28 @@
 			files = (
 				220810CE1CE9B9CE00FEA368 /* Assets.xcassets in Resources */,
 				220810D11CE9B9CE00FEA368 /* Main.storyboard in Resources */,
+				220810E51CE9E66F00FEA368 /* AppCast.xml in Resources */,
 				220810DC1CE9CB8C00FEA368 /* sqlTemplate.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		220810DE1CE9D0CE00FEA368 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		220810C21CE9B9CE00FEA368 /* Sources */ = {
@@ -253,8 +302,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WordPressSQL/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjd.WordPressSQL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -265,8 +318,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WordPressSQL/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjd.WordPressSQL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
