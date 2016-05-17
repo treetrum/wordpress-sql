@@ -51,9 +51,7 @@ class ViewController: NSViewController {
             
         } else {
             
-            // Fail case
-            // TODO: bloop...
-            
+            NSBeep()
             resultPlaceholder.placeholderString = placeholderErrorMessage;
             outputTextField.string = "";
             

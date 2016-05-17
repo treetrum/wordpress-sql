@@ -42,6 +42,7 @@
 		220810DB1CE9CB8C00FEA368 /* sqlTemplate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sqlTemplate.txt; sourceTree = "<group>"; };
 		220810E01CE9DFEE00FEA368 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		220810E41CE9E66F00FEA368 /* AppCast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AppCast.xml; sourceTree = "<group>"; };
+		2251B9771CEB2657006BD292 /* WordPressSQL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WordPressSQL.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 		220810C81CE9B9CE00FEA368 /* WordPressSQL */ = {
 			isa = PBXGroup;
 			children = (
+				2251B9771CEB2657006BD292 /* WordPressSQL.entitlements */,
 				220810DA1CE9CB7900FEA368 /* Resources */,
 				220810C91CE9B9CE00FEA368 /* AppDelegate.swift */,
 				220810CB1CE9B9CE00FEA368 /* ViewController.swift */,
@@ -139,6 +141,11 @@
 					220810C51CE9B9CE00FEA368 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N5B3FJPB8K;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -348,6 +355,7 @@
 				220810D71CE9B9CE00FEA368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
