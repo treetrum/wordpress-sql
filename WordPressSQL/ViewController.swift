@@ -10,16 +10,22 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    let defaultPlaceholderString = "Result..."
+    let placeholderErrorMessage = "All fields required"
+    
     @IBOutlet weak var oldUrlField: NSTextField!
     @IBOutlet weak var newUrlField: NSTextField!
     @IBOutlet weak var prefixField: NSTextField!
     @IBOutlet var outputTextField: NSTextView!
+    @IBOutlet weak var resultPlaceholder: NSTextField!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        resultPlaceholder.placeholderString = defaultPlaceholderString;
     }
 
     override var representedObject: AnyObject? {
@@ -36,9 +42,23 @@ class ViewController: NSViewController {
             "dbprefix": prefixField.stringValue
         ]
         
-        let mergedTemplate = WordPressSQLManager.sharedManager.getMergedTemplate(mergeVariables)
+        if WordPressSQLManager.validateMergeVariableDictionary(mergeVariables) {
+            
+            // Display the merged template
+            resultPlaceholder.placeholderString = "";
+            let mergedTemplate = WordPressSQLManager.sharedManager.getMergedTemplate(mergeVariables)
+            outputTextField.string = mergedTemplate
+            
+        } else {
+            
+            // Fail case
+            // TODO: bloop...
+            
+            resultPlaceholder.placeholderString = placeholderErrorMessage;
+            outputTextField.string = "";
+            
+        }
         
-        outputTextField.string = mergedTemplate
     }
 
 
