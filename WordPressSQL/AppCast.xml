@@ -7,6 +7,22 @@
         <language>en</language>
         
         <item>
+            <title>Version 1.1.1</title>
+            <sparkle:releaseNotesLink>
+                https://wpsql.sjd.co/release-notes/v1.1.1/
+            </sparkle:releaseNotesLink>
+            <pubDate>Wed, 17 May 2016 20:21:00 +0000</pubDate>
+            <enclosure
+            url="https://wpsql.sjd.co/app/v1.1/WordPressSQL.zip"
+            sparkle:version="78"
+            sparkle:shortVersionString="1.1.1"
+            type="application/octet-stream" />
+            <sparkle:minimumSystemVersion>
+                10.7
+            </sparkle:minimumSystemVersion>
+        </item>
+        
+        <item>
             <title>Version 1.1</title>
             <sparkle:releaseNotesLink>
                 https://wpsql.sjd.co/release-notes/v1.1/
