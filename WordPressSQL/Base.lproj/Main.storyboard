@@ -30,23 +30,41 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Edit" id="itm-9I-vXE">
+                            <menuItem title="Edit" id="CJ8-l9-6Aq">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Edit" id="7mk-to-P1f">
+                                <menu key="submenu" title="Edit" id="hG5-WJ-dhd">
                                     <items>
-                                        <menuItem title="Copy" keyEquivalent="c" id="KM9-5k-NhP">
+                                        <menuItem title="Undo" keyEquivalent="z" id="k8D-Ih-ALi">
                                             <connections>
-                                                <action selector="copy:" target="Ady-hI-5gd" id="0Sb-q6-is0"/>
+                                                <action selector="undo:" target="Ady-hI-5gd" id="tKW-0V-4Ob"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="Zy0-Y5-hP7"/>
-                                        <menuItem title="Select All" keyEquivalent="a" id="VQh-xa-FGf">
+                                        <menuItem title="Redo" keyEquivalent="Z" id="7Ad-W9-Rfq">
                                             <connections>
-                                                <action selector="selectAll:" target="Ady-hI-5gd" id="UKw-ao-8jm"/>
+                                                <action selector="redo:" target="Ady-hI-5gd" id="FmT-Re-ntF"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="S3L-Vg-meh"/>
+                                        <menuItem title="Copy" keyEquivalent="c" id="bI3-wX-OEz">
+                                            <connections>
+                                                <action selector="copy:" target="Ady-hI-5gd" id="u7m-3Q-WA0"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste" keyEquivalent="v" id="DUn-QQ-QPs">
+                                            <connections>
+                                                <action selector="paste:" target="Ady-hI-5gd" id="6RL-4g-zaq"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select All" keyEquivalent="a" id="EvU-DV-7TF">
+                                            <connections>
+                                                <action selector="selectAll:" target="Ady-hI-5gd" id="tb9-A9-arO"/>
                                             </connections>
                                         </menuItem>
                                     </items>
                                 </menu>
+                            </menuItem>
+                            <menuItem title="Edit" id="itm-9I-vXE">
+                                <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem title="Help" id="wpr-3q-Mcd">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -63,11 +81,6 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="openSJDCo:" target="Voe-Tx-rLC" id="Yun-Sv-DMY"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="WordPressSQL Help" keyEquivalent="?" id="FKE-Sm-Kum">
-                                            <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -126,7 +139,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="sdi-nc-62D"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="New URL" drawsBackground="YES" id="2lH-tM-H3G">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="http://new.com" drawsBackground="YES" id="2lH-tM-H3G">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -205,7 +218,7 @@ DQ
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="fo3-94-0qJ"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Old URL" drawsBackground="YES" id="dhz-kJ-rsP">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="http://old.com" drawsBackground="YES" id="dhz-kJ-rsP">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -227,7 +240,7 @@ DQ
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="j1d-nW-I7T"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Database Prefix" drawsBackground="YES" id="t8M-vV-jFb">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="wp_" drawsBackground="YES" id="t8M-vV-jFb">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
