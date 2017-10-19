@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -80,7 +81,7 @@
                                         <menuItem title="About the Developer" id="TeD-Hi-MM5">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="openSJDCo:" target="Voe-Tx-rLC" id="Yun-Sv-DMY"/>
+                                                <action selector="openSJDCoWithSender:" target="Voe-Tx-rLC" id="wfJ-JU-nRk"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -109,6 +110,9 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="480" height="300"/>
                         <value key="maxSize" type="size" width="480" height="300"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="QtQ-KG-BPI"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -123,11 +127,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="WordPressSQL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="302"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-Xa-2aB">
-                                <rect key="frame" x="133" y="258" width="215" height="22"/>
+                                <rect key="frame" x="133" y="260" width="215" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Generate WordPress SQL" id="dhe-tA-fAH">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" red="0.2322554886341095" green="0.23224852979183197" blue="0.23225244879722595" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,7 +139,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-3n-apn">
-                                <rect key="frame" x="135" y="184" width="325" height="22"/>
+                                <rect key="frame" x="135" y="186" width="325" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="sdi-nc-62D"/>
                                 </constraints>
@@ -151,15 +155,13 @@
                                     <rect key="frame" x="1" y="1" width="438" height="81"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Uda-U4-Dcq">
+                                        <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Uda-U4-Dcq">
                                             <rect key="frame" x="0.0" y="0.0" width="438" height="81"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="438" height="81"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <size key="maxSize" width="553" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="438" height="81"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,7 +179,8 @@
                                 </scroller>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8B-4s-T4A">
-                                <rect key="frame" x="18" y="219" width="54" height="17"/>
+                                <rect key="frame" x="18" y="221" width="54" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Old URL" id="Vcv-lA-sNh">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -185,7 +188,8 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0p-9d-qy7">
-                                <rect key="frame" x="18" y="187" width="60" height="17"/>
+                                <rect key="frame" x="18" y="189" width="60" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="New URL" id="Bl0-m1-nGG">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -193,7 +197,8 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXG-3o-c4G">
-                                <rect key="frame" x="18" y="155" width="100" height="17"/>
+                                <rect key="frame" x="18" y="157" width="100" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Database Prefix" id="7BV-HI-ytU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -201,7 +206,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kDO-wx-tgx">
-                                <rect key="frame" x="178" y="109" width="125" height="32"/>
+                                <rect key="frame" x="178" y="111" width="125" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate SQL" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="ZQU-PU-La4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -210,11 +215,11 @@ DQ
 </string>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="generateSQL:" target="XfG-lQ-9wD" id="rTW-OC-sto"/>
+                                    <action selector="generateSQLWithSender:" target="XfG-lQ-9wD" id="GA7-nP-gom"/>
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IjL-hq-ItB">
-                                <rect key="frame" x="135" y="216" width="325" height="22"/>
+                                <rect key="frame" x="135" y="218" width="325" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="fo3-94-0qJ"/>
                                 </constraints>
@@ -224,11 +229,8 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="02z-Hx-Cfz">
-                                <rect key="frame" x="88" y="52" width="304" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="dIr-Ho-Kbp"/>
-                                </constraints>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="02z-Hx-Cfz">
+                                <rect key="frame" x="207" y="52" width="67" height="19"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Result..." id="Ja5-Nu-tCO">
                                     <font key="font" metaFont="system" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -236,9 +238,9 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E4I-4n-BsU">
-                                <rect key="frame" x="135" y="152" width="325" height="22"/>
+                                <rect key="frame" x="135" y="154" width="325" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="j1d-nW-I7T"/>
+                                    <constraint firstAttribute="height" constant="22" id="tQn-H6-chJ"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="wp_" drawsBackground="YES" id="t8M-vV-jFb">
                                     <font key="font" metaFont="system"/>
@@ -248,23 +250,23 @@ DQ
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="EUA-3n-apn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="135" id="27v-PK-QXe"/>
-                            <constraint firstItem="E4I-4n-BsU" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="135" id="5B9-Ka-Qhb"/>
                             <constraint firstItem="Kdq-Xa-2aB" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="5Fk-i3-RVQ"/>
                             <constraint firstItem="02z-Hx-Cfz" firstAttribute="centerY" secondItem="Uda-U4-Dcq" secondAttribute="centerY" id="CR1-Rj-is8"/>
                             <constraint firstItem="Kdq-Xa-2aB" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="DPC-O5-6n6"/>
                             <constraint firstAttribute="trailing" secondItem="IjL-hq-ItB" secondAttribute="trailing" constant="20" id="DUy-7J-J42"/>
+                            <constraint firstItem="EUA-3n-apn" firstAttribute="leading" secondItem="IjL-hq-ItB" secondAttribute="leading" id="GPo-bc-xot"/>
+                            <constraint firstItem="EUA-3n-apn" firstAttribute="trailing" secondItem="IjL-hq-ItB" secondAttribute="trailing" id="HXN-tt-Slb"/>
                             <constraint firstItem="whY-7E-W2m" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="KpN-8k-7GR"/>
                             <constraint firstAttribute="trailing" secondItem="whY-7E-W2m" secondAttribute="trailing" constant="20" id="M6f-Qx-xnr"/>
                             <constraint firstItem="kDO-wx-tgx" firstAttribute="top" secondItem="E4I-4n-BsU" secondAttribute="bottom" constant="15" id="MSD-Od-prA"/>
-                            <constraint firstAttribute="trailing" secondItem="E4I-4n-BsU" secondAttribute="trailing" constant="20" id="QnR-y2-1Gv"/>
+                            <constraint firstItem="E4I-4n-BsU" firstAttribute="trailing" secondItem="EUA-3n-apn" secondAttribute="trailing" id="UQn-dN-6mb"/>
                             <constraint firstAttribute="bottom" secondItem="whY-7E-W2m" secondAttribute="bottom" constant="20" id="V2K-0H-Mtk"/>
+                            <constraint firstItem="E4I-4n-BsU" firstAttribute="leading" secondItem="EUA-3n-apn" secondAttribute="leading" id="XTI-rO-7P0"/>
                             <constraint firstItem="kDO-wx-tgx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Xns-zu-4On"/>
                             <constraint firstItem="02z-Hx-Cfz" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="gUX-yU-l2F"/>
-                            <constraint firstAttribute="trailing" secondItem="EUA-3n-apn" secondAttribute="trailing" constant="20" id="hPz-hH-kVj"/>
                             <constraint firstItem="EUA-3n-apn" firstAttribute="top" secondItem="IjL-hq-ItB" secondAttribute="bottom" constant="10" id="ltf-fo-1in"/>
                             <constraint firstItem="IjL-hq-ItB" firstAttribute="top" secondItem="Kdq-Xa-2aB" secondAttribute="bottom" constant="20" id="nbK-FS-tqk"/>
-                            <constraint firstItem="whY-7E-W2m" firstAttribute="top" secondItem="kDO-wx-tgx" secondAttribute="bottom" constant="13" id="qFC-xD-gXH"/>
+                            <constraint firstItem="whY-7E-W2m" firstAttribute="top" secondItem="kDO-wx-tgx" secondAttribute="bottom" constant="15" id="qFC-xD-gXH"/>
                             <constraint firstItem="IjL-hq-ItB" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="135" id="r99-Lk-gWa"/>
                             <constraint firstItem="E4I-4n-BsU" firstAttribute="top" secondItem="EUA-3n-apn" secondAttribute="bottom" constant="10" id="t2o-UF-WaQ"/>
                         </constraints>

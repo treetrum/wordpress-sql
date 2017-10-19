@@ -10,7 +10,7 @@ import Foundation
 
 class WordPressSQLManager {
     
-    let fileLocation = NSBundle.mainBundle().pathForResource("sqlTemplate", ofType: "txt")!
+    let fileLocation = Bundle.main.path(forResource: "sqlTemplate", ofType: "txt")!
     let sqlTemplateText: String?
     
     // This is a singleton, here's the shared resource
@@ -31,7 +31,7 @@ class WordPressSQLManager {
             
             // Insert our variables here...
             for (index, value) in variables {
-                newTemplate = newTemplate.stringByReplacingOccurrencesOfString("{{\(index)}}", withString: value)
+                newTemplate = newTemplate.replacingOccurrences(of: "{{\(index)}}", with: value);
             }
             
             return newTemplate

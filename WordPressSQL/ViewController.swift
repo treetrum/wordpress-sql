@@ -24,14 +24,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         resultPlaceholder.placeholderString = defaultPlaceholderString;
-    }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
     }
     
     @IBAction func generateSQL(sender: AnyObject) {
@@ -42,11 +35,11 @@ class ViewController: NSViewController {
             "dbprefix": prefixField.stringValue
         ]
         
-        if WordPressSQLManager.validateMergeVariableDictionary(mergeVariables) {
+        if WordPressSQLManager.validateMergeVariableDictionary(variables: mergeVariables) {
             
             // Display the merged template
             resultPlaceholder.placeholderString = "";
-            let mergedTemplate = WordPressSQLManager.sharedManager.getMergedTemplate(mergeVariables)
+            let mergedTemplate = WordPressSQLManager.sharedManager.getMergedTemplate(variables: mergeVariables)
             outputTextField.string = mergedTemplate
             
         } else {
