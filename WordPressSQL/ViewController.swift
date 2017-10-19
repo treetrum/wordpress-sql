@@ -40,11 +40,11 @@ class ViewController: NSViewController {
             // Display the merged template
             resultPlaceholder.placeholderString = "";
             let mergedTemplate = WordPressSQLManager.sharedManager.getMergedTemplate(variables: mergeVariables)
-            outputTextField.string = mergedTemplate
+            outputTextField.string = mergedTemplate!
             
         } else {
             
-            NSBeep()
+            NSSound.beep()
             resultPlaceholder.placeholderString = placeholderErrorMessage;
             outputTextField.string = "";
             

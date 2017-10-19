@@ -141,6 +141,7 @@
 					220810C51CE9B9CE00FEA368 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N5B3FJPB8K;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -339,7 +340,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjd.WordPressSQL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -360,7 +362,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sjd.WordPressSQL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

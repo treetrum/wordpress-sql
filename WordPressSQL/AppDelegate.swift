@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func openSJDCo(sender: AnyObject) {
-        NSWorkspace.shared().open(NSURL(string: "http://sjd.co")! as URL)
+        NSWorkspace.shared.open(NSURL(string: "http://sjd.co")! as URL)
     }
     
 }
